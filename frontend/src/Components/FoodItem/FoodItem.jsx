@@ -4,7 +4,7 @@ import { assets } from "../../assets/assets";
 import { useStoreContext } from "../../context/StoreContextProvider";
 function FoodItem({ id, name, price, description, image }) {
   // const [itemCount, setItemCount] = useState(0);
-  const { cartItems, addToCart, removeFromCart } = useStoreContext();
+  const { cartItems, addToCart, reduceQuantity } = useStoreContext();
   return (
     <div className="food-item">
       <div className="food-item-image-container">
@@ -21,7 +21,7 @@ function FoodItem({ id, name, price, description, image }) {
             <img
               src={assets.remove_icon_red}
               alt=""
-              onClick={() => removeFromCart(id)}
+              onClick={() => reduceQuantity(id)}
             />
             <p>{cartItems[id]}</p>
             <img

@@ -5,3 +5,8 @@ console.log((cartItems))
 // cartItems.itemId = 5 --> ye key banayega "itemId" naam ki
 const obj = {...cartItems , [itemId] : 6} // isme pue cartItems object ko destructure kiya aur us key ko set kiya jo itemId variable represent kar rha hai -> item_3
 console.log(obj)
+
+// const obj = {fname: "sneha" , lname: "sharma" , futureLName: "Verma"}
+// for (const abc in obj){
+//     console.log(obj[abc])
+// }
