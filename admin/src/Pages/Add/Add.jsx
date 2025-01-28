@@ -3,8 +3,7 @@ import "./Add.css";
 import { assets } from "../../assets/assets";
 import { toast } from "react-toastify";
 import axios from "axios";
-function Add() {
-  const url = "http://localhost:4000";
+function Add({ url }) {
   const [image, setImage] = useState(false);
   const [data, setData] = useState({
     name: "",
@@ -30,20 +29,27 @@ function Add() {
     formData.append("category", data.category);
     formData.append("price", Number(data.price));
     formData.append("image", image);
-    const response = await axios.post(`${url}/api/food/add`, formData);
-    if (response.data.success) {
-      setData({
-        name: "",
-        description: "",
-        price: "",
-        category: "Salad",
-      });
-      setImage(false);
-      toast.success(response.data.message, { autoClose: 2000 });
-    } else {
-      toast.error(response.data.message, { autoClose: 2000 });
+
+    try {
+      const response = await axios.post(`${url}/api/food/add`, formData);
+      if (response.data.success) {
+        setData({
+          name: "",
+          description: "",
+          price: "",
+          category: "Salad",
+        });
+        setImage(null); // Set image to null if needed
+        toast.success(response.data.message, { autoClose: 1000 });
+      } else {
+        toast.error(response.data.message, { autoClose: 1000 });
+      }
+    } catch (error) {
+      toast.error("Error submitting data", { autoClose: 2000 });
+      console.error(error);
     }
   };
+
   return (
     <div className="add">
       <form action="" onSubmit={onSubmitHandler} className="flex-col">

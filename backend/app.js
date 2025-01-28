@@ -1,7 +1,7 @@
 import express from "express"
 import cors from "cors"
 
-const app = express()
+export const app = express()
 
 app.use(cors())
 app.use(express.json())
@@ -9,8 +9,9 @@ app.use(express.json())
 
 //import routes
 import foodRouter from "./routes/foodRoute.js"
+import userRouter from "./routes/userRoute.js"
 
 //routes endpoint
 app.use("/api/food" , foodRouter)
 app.use("/images" , express.static('uploads'))
-export {app}
+app.use("/api/user" , userRouter)
