@@ -11,6 +11,7 @@ function Cart() {
     addToCart,
     reduceQuantity,
     getTotalCartAmount,
+    url,
   } = useStoreContext();
   // console.log(cartItems);
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ function Cart() {
               return (
                 <div key={index}>
                   <div className="cart-items-title cart-items-item">
-                    <img src={item.image} alt="" />
+                    <img src={`${url}+/images/+${item.image}`} alt="" />
                     <p>{item.name}</p>
                     <p>${item.price}</p>
                     <div className="cart-item-quantity">

@@ -1,10 +1,11 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-
+import axios from "axios";
 const StoreContext = createContext(null);
-import { food_list } from "../assets/assets";
+
 function StoreContextProvider({ children }) {
   const [cartItems, setCartItems] = useState({});
   const [token, setToken] = useState("");
+  const [food_list, setFoodList] = useState([]);
   const url = "http://localhost:4000";
   // isme cartItems mein key hai item ki id aur uski value hai quantity of that item
   const addToCart = (itemId) => {
@@ -52,10 +53,18 @@ function StoreContextProvider({ children }) {
     }
     return totalAmount;
   };
+  const fetchFoodList = async () => {
+    const response = await axios.get(`${url}/api/food/list`);
+    setFoodList(response.data.data);
+  };
   useEffect(() => {
-    if (localStorage.getItem("token")) {
-      setToken(localStorage.getItem("token"));
+    async function loadData() {
+      await fetchFoodList();
+      if (localStorage.getItem("token")) {
+        setToken(localStorage.getItem("token"));
+      }
     }
+    loadData();
   }, []);
   const contextValue = {
     food_list,
