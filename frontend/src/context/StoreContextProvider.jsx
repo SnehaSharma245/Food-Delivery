@@ -4,6 +4,8 @@ const StoreContext = createContext(null);
 import { food_list } from "../assets/assets";
 function StoreContextProvider({ children }) {
   const [cartItems, setCartItems] = useState({});
+  const [token, setToken] = useState("");
+  const url = "http://localhost:4000";
   // isme cartItems mein key hai item ki id aur uski value hai quantity of that item
   const addToCart = (itemId) => {
     //if there is no quantity associated with the item corresponding to that itemId -> cartItems[itemId]
@@ -50,7 +52,11 @@ function StoreContextProvider({ children }) {
     }
     return totalAmount;
   };
-
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      setToken(localStorage.getItem("token"));
+    }
+  }, []);
   const contextValue = {
     food_list,
     cartItems,
@@ -59,6 +65,9 @@ function StoreContextProvider({ children }) {
     setCartItems,
     reduceQuantity,
     getTotalCartAmount,
+    url,
+    token,
+    setToken,
   };
 
   return (
