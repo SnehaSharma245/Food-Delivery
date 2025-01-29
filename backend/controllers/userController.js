@@ -3,6 +3,7 @@ import jwt from "jsonwebtoken"
 import bcrypt from "bcrypt"
 import validator from "validator"
 
+
 const createToken = (id) =>{
    return jwt.sign({id} , process.env.JWT_SECRET)
 }
@@ -28,7 +29,10 @@ const loginUser = async (req,res) =>{
 }
 
 const registerUser = async (req,res)=>{
+   
     const {name ,email ,password} = req.body;
+    console.log(req.headers)
+    console.log(req.body);
     try {
         // checking is user already exists
         const exist = await userModel.findOne({email});
