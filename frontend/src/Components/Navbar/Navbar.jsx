@@ -4,6 +4,7 @@ import { assets } from "../../assets/assets";
 import { Link, useNavigate } from "react-router-dom";
 import { useStoreContext } from "../../context/StoreContextProvider";
 function Navbar({ setShowLogin }) {
+  const navigate = useNavigate();
   const [menu, setMenu] = useState("home");
   const { cartItems, getTotalCartAmount, token, setToken } = useStoreContext();
   const logout = () => {
@@ -66,11 +67,9 @@ function Navbar({ setShowLogin }) {
           <div className="navbar-profile">
             <img src={assets.profile_icon} alt="" />
             <ul className="nav-profile-dropdown">
-              <li>
-                <Link to="/order">
-                  <img src={assets.bag_icon} alt="" className="bag-icon" />
-                  <p>Orders</p>
-                </Link>
+              <li onClick={() => navigate("/myorders")}>
+                <img src={assets.bag_icon} alt="" className="bag-icon" />
+                <p>Orders</p>
               </li>
               <hr />
               <li onClick={logout}>
