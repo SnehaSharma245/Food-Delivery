@@ -8,7 +8,11 @@ function FoodItem({ id, name, price, description, image }) {
   return (
     <div className="food-item">
       <div className="food-item-image-container">
-        <img src={url + /images/ + image} className="food-item-image" alt="" />
+        <img
+          src={`${url}/images/` + image}
+          className="food-item-image"
+          alt=""
+        />
 
         {!cartItems[id] ? (
           <img
