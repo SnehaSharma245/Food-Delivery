@@ -9,6 +9,7 @@ function FoodItem({ id, name, price, description, image }) {
     <div className="food-item">
       <div className="food-item-image-container">
         <img src={url + /images/ + image} className="food-item-image" alt="" />
+
         {!cartItems[id] ? (
           <img
             src={assets.add_icon_white}

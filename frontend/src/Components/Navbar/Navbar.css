@@ -43,6 +43,9 @@
 .navbar-search-icon {
   position: relative;
 }
+.navbar-right img {
+  cursor: pointer;
+}
 .navbar-search-icon .dot {
   position: absolute;
   min-width: 10px;
@@ -81,9 +84,27 @@
 .nav-profile-dropdown img {
   width: 20px;
 }
-
+.search-field {
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-bar input[type="text"] {
+  width: 80%;
+  min-width: 60vw;
+  padding: 0.6rem;
+  outline: none;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #49557e1a;
+  font-size: 1.1rem;
+}
 .nav-profile-dropdown li:hover {
   color: tomato;
+}
+.search-bar input[type="text"]:focus {
+  outline: tomato 1px solid;
 }
 @media (max-width: 1050px) {
   .navbar .logo {
