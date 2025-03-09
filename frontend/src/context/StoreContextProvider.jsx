@@ -6,7 +6,7 @@ function StoreContextProvider({ children }) {
   const [cartItems, setCartItems] = useState({});
   const [token, setToken] = useState("");
   const [food_list, setFoodList] = useState([]);
-  const url = "https://food-delivery-rtqd.onrender.com";
+  const url = "https://food-del-backend-ydsa.onrender.com";
   // isme cartItems mein key hai item ki id aur uski value hai quantity of that item
   const addToCart = async (itemId) => {
     //if there is no quantity associated with the item corresponding to that itemId -> cartItems[itemId]
