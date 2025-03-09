@@ -6,7 +6,7 @@ import List from "./Pages/List/List";
 import Orders from "./Pages/Orders/Orders";
 import { ToastContainer } from "react-toastify";
 function App() {
-  const url = "http://localhost:4000";
+  const url = "https://food-delivery-rtqd.onrender.com";
   return (
     <>
       <Navbar />
