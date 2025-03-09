@@ -14,4 +14,8 @@ export const assets = {
   parcel_icon,
 };
 
+<<<<<<< HEAD
 export const url = "https://food-del-backend-ydsa.onrender.com";
+=======
+export const url = 'https://food-del-backend-ydsa.onrender.com'
+>>>>>>> 09bd963a0ec2ec0701a8b1bc4c3c2d8e14b43918
