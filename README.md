@@ -2,40 +2,39 @@
 
 Welcome to the Food Delivery Website repository! This project offers a seamless platform for users to browse food items, manage their orders, and make secure payments, while providing administrators with tools to manage the menu and track user orders efficiently.
 
-## Features
+## ✨ Features
 
-### User Part
-- **Food Menu**: Browse a variety of food items with detailed descriptions and prices.
-- **Filters**: Filter items by categories such as cuisine, price range, or availability.
-- **Cart Management**: Add items to the cart, delete items from the cart, view the current cart, and edit details directly in the cart.
-- **Payment Integration**: Secure payment gateway (Stripe) to complete transactions seamlessly.
-- **Order History**: View your past orders for reference.
+### 👥 User Part
+- **Food Menu**: Browse and explore a variety of food items.
+- **Cart Management**: Add, delete, view, and edit items in your cart.
+- **Order History**: Check your past orders anytime.
+- **Payment Integration**: Secure payments via Stripe.
 
-### Admin Part
-- **Manage Menu**: Add, update, or delete food items in the menu.
-- **Order Overview**: Monitor user orders and update their statuses.
-- **Order History**: View the order history of all users.
+### 🛠️ Admin Part
+- **Manage Menu**: Easily add, update, or remove food items.
+- **Order Overview**: Track and update user order statuses.
+- **Order History**: View detailed order history of all users.
 
-## Live Links
+## 🌐 Live Links
 - **User Frontend**: [Food Delivery User App](https://food-del-frontend-xo6i.onrender.com)
 - **Admin Panel**: [Food Delivery Admin Panel](https://food-del-admin-m5aq.onrender.com)
 
-## Tech Stack
+## 🖥️ Tech Stack
 - **Frontend**: React.js
 - **Backend**: Node.js, Express.js
-- **Database**: MongoDB 
+- **Database**: MongoDB
 - **Payment Integration**: Stripe API
 - **Authentication**: JWT
 
-## Installation
+## ⚙️ Installation
 
-### Clone the Repository
+### 📂 Clone the Repository
 Clone the repository to your local machine:
 ```bash
 git clone https://github.com/your-username/food-delivery-app.git
 ```
 
-### Backend
+### 🔧 Backend
 1. Navigate to the backend folder and install dependencies:
    ```bash
    cd backend
@@ -47,7 +46,7 @@ git clone https://github.com/your-username/food-delivery-app.git
    npm start
    ```
 
-### Frontend
+### 🌟 Frontend
 1. Navigate to the frontend folder and install dependencies:
    ```bash
    cd frontend
@@ -58,7 +57,7 @@ git clone https://github.com/your-username/food-delivery-app.git
    npm run dev
    ```
 
-### Admin Panel
+### 🛡️ Admin Panel
 1. Navigate to the admin folder and install dependencies:
    ```bash
    cd admin
@@ -67,6 +66,4 @@ git clone https://github.com/your-username/food-delivery-app.git
 2. Start the admin development server:
    ```bash
    npm run dev
-   ```
-
-
+   
