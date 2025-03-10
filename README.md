@@ -1,6 +1,6 @@
 # Food Delivery Website
 
-Welcome to the Food Delivery Website repository! This project provides a functional platform for browsing food items, applying filters, and making payments.
+Welcome to the Food Delivery Website repository! This project offers a seamless platform for users to browse food items, manage their orders, and make secure payments, while providing administrators with tools to manage the menu and track user orders efficiently.
 
 ## Features
 
